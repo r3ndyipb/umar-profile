@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hai, I am Umar Syarif — Executive Portfolio</title>
+  <meta name="description" content="Official Executive Portfolio of Umar Syarif — Visionary Leadership, Strategic Innovation & Digital Transformation.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans / Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icon.png">
+</head>
+<body>
+
+  <!-- Fullscreen 100% Width & Height Layout -->
+  <div class="page-wrapper">
+    
+    <!-- 01. Full 100vh Hero Screen (Navbar + Hero Stage) -->
+    <section class="hero-screen" id="home">
+      <!-- Top Navigation Header (Avatar Icon & Menu Left, Outline Icons Right) -->
+      <header class="navbar">
+        <!-- Left Group: Avatar Icon + Menu Links -->
+        <div class="nav-left-group">
+          <a href="#" class="brand-logo-icon" aria-label="Umar Syarif" title="Umar Syarif">
+            <img src="icon.png" alt="Umar Syarif" class="brand-avatar-img" width="26" height="26">
+          </a>
+
+          <!-- Menu Links beside Icon -->
+          <nav class="nav-menu">
+            <a href="#home" class="nav-item active">OVERVIEW</a>
+            <a href="#about" class="nav-item">PROFILE</a>
+            <a href="#expertise" class="nav-item">EXPERTISE</a>
+            <a href="#leadership" class="nav-item">LEADERSHIP</a>
+            <a href="#contact" class="nav-item">CONNECT</a>
+          </nav>
+        </div>
+
+        <!-- Right Outline Social Icons (No Fill) & Language Dropdown -->
+        <div class="nav-socials">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="nav-icon-link" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" r="2"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/628170034354" target="_blank" rel="noopener" class="nav-icon-link" aria-label="WhatsApp: +62 817-0034-354" title="WhatsApp: +62 817-0034-354">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+            </svg>
+          </a>
+
+          <!-- Language Selector Dropdown -->
+          <div class="lang-dropdown-wrapper" id="langDropdownWrapper">
+            <button type="button" class="lang-btn" id="langBtn" aria-label="Select Language">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              <span class="lang-code-text" id="currentLangCode">EN</span>
+              <span class="lang-chevron" id="langChevron">▾</span>
+            </button>
+            <div class="lang-menu" id="langMenu" style="display: none;">
+              <button type="button" class="lang-item selected" onclick="selectLanguage('EN', 'English')">
+                <span class="lang-item-badge">EN</span>
+                <div class="lang-item-labels">
+                  <span class="lang-item-name">English</span>
+                  <span class="lang-item-native">English</span>
+                </div>
+                <span class="lang-item-check">✓</span>
+              </button>
+              <button type="button" class="lang-item" onclick="selectLanguage('ID', 'Indonesia')">
+                <span class="lang-item-badge">ID</span>
+                <div class="lang-item-labels">
+                  <span class="lang-item-name">Indonesia</span>
+                  <span class="lang-item-native">Bahasa Indonesia</span>
+                </div>
+              </button>
+              <button type="button" class="lang-item" onclick="selectLanguage('ZH', 'China')">
+                <span class="lang-item-badge">ZH</span>
+                <div class="lang-item-labels">
+                  <span class="lang-item-name">China</span>
+                  <span class="lang-item-native">中文</span>
+                </div>
+              </button>
+              <button type="button" class="lang-item" onclick="selectLanguage('JA', 'Jepang')">
+                <span class="lang-item-badge">JA</span>
+                <div class="lang-item-labels">
+                  <span class="lang-item-name">Jepang</span>
+                  <span class="lang-item-native">日本語</span>
+                </div>
+              </button>
+              <button type="button" class="lang-item" onclick="selectLanguage('AR', 'Arab')">
+                <span class="lang-item-badge">AR</span>
+                <div class="lang-item-labels">
+                  <span class="lang-item-name">Arab</span>
+                  <span class="lang-item-native">العربية</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Hero Stage -->
+      <main class="hero-stage">
+        
+        <!-- Left Column: Typography & Professional Bio -->
+        <div class="hero-left">
+          
+          <!-- One-line Greeting -->
+          <p class="greeting-line">Hai, I am</p>
+          
+          <!-- Big Bold Umar Syarif Headline (+10% Larger) with Cyber Hologram Glitch -->
+          <h1 class="hero-name cyber-glitch" data-text="Umar Syarif">
+            <span class="cyber-glitch-text">Umar Syarif</span>
+            <span class="glitch-copy glitch-copy-1" aria-hidden="true">Umar Syarif</span>
+            <span class="glitch-copy glitch-copy-2" aria-hidden="true">Umar Syarif</span>
+            <span class="glitch-scanline" aria-hidden="true"></span>
+          </h1>
+
+          <!-- Concise 2-Line Thin Executive Bio -->
+          <p class="executive-bio">
+            Executive Leader &amp; Strategic Advisory.<br>
+            Driving transformative innovation &amp; sustainable digital growth.
+          </p>
+
+          <!-- Professional CTA Group -->
+          <div class="cta-wrapper">
+            <a href="#contact" class="btn-executive">
+              <span>Discover Vision &amp; Impact</span>
+              <svg class="cta-arrow" viewBox="0 0 16 16" fill="none">
+                <path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Umar Portrait (+20% Size, Bottom-Right Grounded) & Clean Circle Backdrop -->
+        <div class="hero-right">
+          
+          <!-- Clean Solid Grey Circle Backdrop -->
+          <div class="circle-backdrop"></div>
+          
+          <!-- Umar Cutout Image (Scaled 20% larger, stuck to bottom) -->
+          <div class="portrait-container">
+            <img 
+              src="UMAR.png" 
+              alt="Umar Syarif - Executive Portrait" 
+              class="portrait-img" 
+              id="portraitImg"
+              loading="eager"
+            >
+          </div>
+
+        </div>
+
+      </main>
+    </section>
+
+    <!-- Infinite Marquee Loop (36+ Business, HCM, Finance Skills) -->
+    <section class="marquee-section" aria-label="Business & Leadership Skills">
+      <div class="marquee-wrapper">
+        <div class="marquee-track">
+          <!-- Track 1 -->
+          <div class="marquee-content">
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Strategic Leadership</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Human Capital Management (HCM)</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Corporate Finance &amp; M&amp;A</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Digital Transformation</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Enterprise Architecture</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Organizational Development</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Talent Acquisition &amp; Retention</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Financial Modeling &amp; Valuation</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">P&amp;L Management</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Agile &amp; OKR Frameworks</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Risk Management &amp; Compliance</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Executive Coaching &amp; Mentorship</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Change Management</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Product Strategy &amp; GTM</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Operational Excellence</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Venture Capital &amp; PE</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Cross-Functional Synergy</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Stakeholder Engagement</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Supply Chain Optimization</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Performance Management Systems</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">ESG &amp; Sustainable Governance</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Revenue Operations (RevOps)</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Capital Allocation Strategy</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Data-Driven Decision Making</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">HR Tech &amp; Workforce Analytics</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Strategic Partnerships</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Brand Architecture</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Crisis Management</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Board Advisory</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Omnichannel CX</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Budgeting &amp; Forecasting</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Business Model Innovation</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Culture Transformation</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Cost Optimization</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">AI Strategy &amp; Modernization</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Global Market Expansion</span></span>
+          </div>
+
+          <!-- Track 2 (Duplicate for Infinite Loop) -->
+          <div class="marquee-content" aria-hidden="true">
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Strategic Leadership</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Human Capital Management (HCM)</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Corporate Finance &amp; M&amp;A</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Digital Transformation</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Enterprise Architecture</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Organizational Development</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Talent Acquisition &amp; Retention</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Financial Modeling &amp; Valuation</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">P&amp;L Management</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Agile &amp; OKR Frameworks</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Risk Management &amp; Compliance</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Executive Coaching &amp; Mentorship</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Change Management</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Product Strategy &amp; GTM</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Operational Excellence</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Venture Capital &amp; PE</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Cross-Functional Synergy</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Stakeholder Engagement</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Supply Chain Optimization</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Performance Management Systems</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">ESG &amp; Sustainable Governance</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Revenue Operations (RevOps)</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Capital Allocation Strategy</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Data-Driven Decision Making</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">HR Tech &amp; Workforce Analytics</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Strategic Partnerships</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Brand Architecture</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Crisis Management</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Board Advisory</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Omnichannel CX</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Budgeting &amp; Forecasting</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Business Model Innovation</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Culture Transformation</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Cost Optimization</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">AI Strategy &amp; Modernization</span></span>
+            <span class="marquee-item"><span class="marquee-bullet">✦</span><span class="marquee-text">Global Market Expansion</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 // ABOUT ME SECTION (Image Left, Narrative & Metrics Right) -->
+    <section class="about-section" id="about" aria-label="About Umar Syarif">
+      <div class="section-container">
+        
+        <div class="section-eyebrow-wrapper">
+          <span class="section-eyebrow">01 // EXECUTIVE PROFILE</span>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Left Column: Top Aligned Portrait & Floating Badge -->
+          <div class="about-visual-col">
+            <div class="about-image-card">
+              <div class="about-image-wrapper">
+                <img 
+                  src="nyamping.png" 
+                  alt="Umar Syarif Executive Profile" 
+                  class="about-portrait-img"
+                  loading="lazy"
+                >
+              </div>
+              
+              <div class="about-floating-badge">
+                <div class="badge-pulse-dot"></div>
+                <div>
+                  <div class="badge-title">Executive Advisor</div>
+                  <div class="badge-subtitle">Strategy • HCM • Finance</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Narrative, Pillars & Impact Metrics -->
+          <div class="about-content-col">
+            <h2 class="about-heading">
+              Bridging Strategic Vision, Human Capital<br class="about-heading-br">
+              &amp; Sustainable Scale
+            </h2>
+
+            <p class="about-lead">
+              Umar Syarif is an executive leader and strategic advisor dedicated to driving enterprise resilience, organizational excellence, and transformative growth in fast-evolving markets.
+            </p>
+
+            <p class="about-body">
+              With a multifaceted background spanning Human Capital Management (HCM), corporate financial engineering, and digital modernization, Umar aligns high-performance human talent with stringent P&amp;L governance to build scalable, future-ready organizations.
+            </p>
+
+            <!-- Impact Metric Grid -->
+            <div class="about-metrics-grid">
+              <div class="metric-card">
+                <div class="metric-value">15+</div>
+                <div class="metric-label">Years Leadership</div>
+                <div class="metric-sub">Executive track record across tech, retail &amp; corporate</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-value">50+</div>
+                <div class="metric-label">Enterprise Transformations</div>
+                <div class="metric-sub">Successful HCM, finance &amp; digital restructuring</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-value">$120M+</div>
+                <div class="metric-label">Portfolio &amp; P&amp;L Managed</div>
+                <div class="metric-sub">Capital efficiency &amp; revenue operations governance</div>
+              </div>
+              <div class="metric-card">
+                <div class="metric-value">98%</div>
+                <div class="metric-label">Talent &amp; Cultural Index</div>
+                <div class="metric-sub">High-performance team building &amp; employee retention</div>
+              </div>
+            </div>
+
+            <!-- Executive Philosophy Quote Box -->
+            <div class="about-quote-box">
+              <div class="quote-icon">“</div>
+              <p class="quote-text">
+                True enterprise transformation happens when operational rigor, empathetic leadership, and data-driven agility converge into a shared mission.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 02 // PILLARS OF EXPERTISE -->
+    <section class="expertise-section" id="expertise" aria-label="Core Pillars of Expertise">
+      <div class="section-container">
+        
+        <div class="section-eyebrow-wrapper">
+          <span class="section-eyebrow">02 // PILLARS OF EXPERTISE</span>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="section-header-row">
+          <h2 class="section-title">
+            Holistic Capabilities Designed for Enterprise Scale
+          </h2>
+          <p class="section-subtitle">
+            A battle-tested framework combining human-centric leadership, fiscal discipline, and technological acceleration.
+          </p>
+        </div>
+
+        <div class="expertise-grid">
+          <!-- Pillar 1 -->
+          <div class="expertise-card">
+            <div class="expertise-card-header">
+              <span class="pillar-number">01</span>
+              <span class="pillar-arrow">↗</span>
+            </div>
+            <h3 class="pillar-title">Human Capital &amp; Culture Engineering</h3>
+            <p class="pillar-desc">Transforming organizational structures into agile, high-performing talent ecosystems that drive retention and cross-functional synergy.</p>
+            <ul class="pillar-list">
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>Strategic Workforce Architecture &amp; Planning</span></li>
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>C-Suite &amp; Executive Leadership Coaching</span></li>
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>Performance Management Systems (OKR / KPI)</span></li>
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>Culture Transformation &amp; Employee Engagement</span></li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="expertise-card">
+            <div class="expertise-card-header">
+              <span class="pillar-number">02</span>
+              <span class="pillar-arrow">↗</span>
+            </div>
+            <h3 class="pillar-title">Corporate Finance &amp; Value Creation</h3>
+            <p class="pillar-desc">Aligning capital allocation, cost governance, and financial modeling to unlock sustainable EBITDA expansion and M&amp;A readiness.</p>
+            <ul class="pillar-list">
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>P&amp;L Governance &amp; Cost Optimization</span></li>
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>Capital Allocation Strategy &amp; Modeling</span></li>
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>M&amp;A Due Diligence &amp; Post-Merger Integration</span></li>
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>Risk Management, Compliance &amp; Internal Audit</span></li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="expertise-card">
+            <div class="expertise-card-header">
+              <span class="pillar-number">03</span>
+              <span class="pillar-arrow">↗</span>
+            </div>
+            <h3 class="pillar-title">Digital &amp; AI Tech Modernization</h3>
+            <p class="pillar-desc">Bridging executive strategy with emerging technology, automating workflows, and enabling actionable data-driven intelligence.</p>
+            <ul class="pillar-list">
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>Enterprise Architecture &amp; Cloud Scaling</span></li>
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>AI Adoption &amp; Automation Roadmaps</span></li>
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>Revenue Operations (RevOps) Engineering</span></li>
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>Omnichannel Customer Experience (CX)</span></li>
+            </ul>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="expertise-card">
+            <div class="expertise-card-header">
+              <span class="pillar-number">04</span>
+              <span class="pillar-arrow">↗</span>
+            </div>
+            <h3 class="pillar-title">Board Advisory &amp; Governance</h3>
+            <p class="pillar-desc">Providing unbiased strategic counsel to boards and founders to navigate market pivots, crises, and global expansion.</p>
+            <ul class="pillar-list">
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>ESG &amp; Sustainable Corporate Governance</span></li>
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>Stakeholder &amp; Investor Relations</span></li>
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>Strategic Partnerships &amp; Joint Ventures</span></li>
+              <li class="pillar-list-item"><span class="pillar-check">✦</span><span>Crisis Management &amp; Enterprise Resilience</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03 // PROVEN TRACK RECORD & IMPACT -->
+    <section class="impact-section" id="leadership" aria-label="Leadership Milestones & Impact">
+      <div class="section-container">
+        
+        <div class="section-eyebrow-wrapper">
+          <span class="section-eyebrow">03 // PROVEN TRACK RECORD</span>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="section-header-row">
+          <h2 class="section-title">
+            Measurable Outcomes Across Transformative Eras
+          </h2>
+          <p class="section-subtitle">
+            Consistent execution delivering shareholder value, operational resilience, and energized teams.
+          </p>
+        </div>
+
+        <div class="impact-timeline">
+          <!-- Card 1 -->
+          <div class="impact-card">
+            <div class="impact-card-top">
+              <span class="impact-period">2023 — Present</span>
+              <span class="impact-tag">STRATEGY &amp; HCM</span>
+            </div>
+            <h3 class="impact-title">Enterprise-Wide Workforce &amp; Digital Restructuring</h3>
+            <p class="impact-desc">Led organizational redesign across 1,200+ employees, instituting an agile OKR performance matrix and automated HR analytics stack.</p>
+            <div class="impact-metric-pill">
+              <span class="pill-dot"></span>
+              <span class="pill-text">+34% Productivity &amp; 96% Retention</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="impact-card">
+            <div class="impact-card-top">
+              <span class="impact-period">2020 — 2023</span>
+              <span class="impact-tag">FINANCE &amp; REV-OPS</span>
+            </div>
+            <h3 class="impact-title">Multi-Market P&amp;L Turnaround &amp; Capital Allocation</h3>
+            <p class="impact-desc">Architected cost rationalization program and unit economic overhaul while navigating post-pandemic macroeconomic volatility.</p>
+            <div class="impact-metric-pill">
+              <span class="pill-dot"></span>
+              <span class="pill-text">+28% EBITDA Margin &amp; $40M+ Saved</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="impact-card">
+            <div class="impact-card-top">
+              <span class="impact-period">2016 — 2020</span>
+              <span class="impact-tag">M&amp;A &amp; SCALE</span>
+            </div>
+            <h3 class="impact-title">Cross-Border M&amp;A Diligence &amp; Post-Merger Integration</h3>
+            <p class="impact-desc">Directed integration of three regional acquisitions, unifying disparate tech systems, financial reporting, and cultural identity.</p>
+            <div class="impact-metric-pill">
+              <span class="pill-dot"></span>
+              <span class="pill-text">100% Synergies Realized in 9 Mo</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 04 // TESTIMONIALS & ENDORSEMENTS -->
+    <section class="testimonials-section" aria-label="Executive Endorsements">
+      <div class="section-container">
+        
+        <div class="section-eyebrow-wrapper">
+          <span class="section-eyebrow">04 // ENDORSEMENTS &amp; RECOGNITION</span>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="section-header-row">
+          <h2 class="section-title">
+            Trusted by Boards, Founders &amp; Executive Peers
+          </h2>
+          <p class="section-subtitle">
+            Reflections from leaders on Umar’s strategic governance and transformative advisory.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-quote">Umar combines rare strategic depth with exceptional empathy. He transformed our leadership alignment and steered our organizational scale during a pivotal high-growth phase.</p>
+            <div class="testimonial-author-box">
+              <div class="author-avatar-badge">A</div>
+              <div>
+                <div class="author-name">Alexander Hartono</div>
+                <div class="author-role">Managing Partner &amp; Board Member</div>
+                <div class="author-org">Apex Capital Ventures</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="quote-mark">“</div>
+            <p class="testimonial-quote">His ability to break down complex financial and HCM challenges into clear, actionable roadmaps delivered immediate bottom-line impact. A truly visionary executive partner.</p>
+            <div class="testimonial-author-box">
+              <div class="author-avatar-badge">S</div>
+              <div>
+                <div class="author-name">Dr. Stephanie Wardani</div>
+                <div class="author-role">Chief Executive Officer</div>
+                <div class="author-org">Nusantara Global Tech</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+          
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">
+              “Umar possesses that rare executive duality: razor-sharp financial acumen paired with profound empathy for people and organizational dynamics.”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <div class="author-name">Bambang Haryanto</div>
+                <div class="author-role">Chairman &amp; Managing Partner, Nusantara Capital</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">
+              “His guidance during our HCM restructuring was invaluable. Umar transformed our corporate culture from reactive to a fiercely accountable, agile powerhouse.”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <div class="author-name">Sarah Wijaya</div>
+                <div class="author-role">Chief Executive Officer, Astraea Retail Group</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-quote">
+              “When scaling from 100 to 1,000 people, Umar was the architectural anchor who kept our operations, cash flows, and executive team in perfect synchrony.”
+            </p>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <div class="author-name">David Tanur</div>
+                <div class="author-role">Founder &amp; President Director, Apex Global Tech</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 05 // CONTACT & ADVISORY BOOKING -->
+    <section class="contact-section" id="contact" aria-label="Connect with Umar Syarif">
+      <div class="section-container">
+        
+        <div class="section-eyebrow-wrapper">
+          <span class="section-eyebrow">05 // ENGAGE &amp; COLLABORATE</span>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="contact-card-glass">
+          <div class="contact-grid">
+            
+            <div class="contact-info-col">
+              <h2 class="contact-heading">
+                Ready to Accelerate Your Strategic Trajectory?
+              </h2>
+              <p class="contact-subtext">
+                Available for Board Advisory, Interim Executive Leadership, Keynote Engagements, and Enterprise Transformation Consultations.
+              </p>
+
+              <div class="contact-channel-list">
+                <div class="channel-item">
+                  <div class="channel-icon">📍</div>
+                  <div>
+                    <div class="channel-label">Office Address</div>
+                    <div class="channel-val">Jalan Veteran III No. 43, Ds. Banjarsari, Ciawi, Bogor, 16720</div>
+                  </div>
+                </div>
+
+                <div class="channel-item">
+                  <div class="channel-icon">📱</div>
+                  <div>
+                    <div class="channel-label">Phone &amp; WhatsApp</div>
+                    <div class="channel-val">
+                      <a href="https://wa.me/628170034354" target="_blank" rel="noopener" class="channel-link">
+                        +62 817-0034-354
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="channel-item">
+                  <div class="channel-icon">✉️</div>
+                  <div>
+                    <div class="channel-label">Executive Office</div>
+                    <div class="channel-val">contact@umarsyarif.com</div>
+                  </div>
+                </div>
+
+                <div class="channel-item">
+                  <div class="channel-icon">💼</div>
+                  <div>
+                    <div class="channel-label">Professional Network</div>
+                    <div class="channel-val">linkedin.com/in/umarsyarif</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-quick-actions">
+                <a href="https://wa.me/628170034354" target="_blank" rel="noopener" class="btn-quick-wa">
+                  <span>Chat via WhatsApp</span>
+                  <span>↗</span>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-quick-li">
+                  <span>Connect on LinkedIn</span>
+                  <span>↗</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-form-col">
+              <form class="executive-form" id="inquiryForm">
+                <div class="form-group">
+                  <label class="form-label" for="formName">Your Full Name &amp; Title</label>
+                  <input type="text" id="formName" required placeholder="e.g. Maya Indrawati, Chief Executive Officer" class="form-input">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="formEmail">Corporate Email Address</label>
+                  <input type="email" id="formEmail" required placeholder="e.g. maya@enterprise.com" class="form-input">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="formSubject">Engagement Scope</label>
+                  <select id="formSubject" class="form-input form-select">
+                    <option value="Executive Advisory">Executive / Board Advisory</option>
+                    <option value="HCM &amp; Org Transformation">HCM &amp; Organizational Transformation</option>
+                    <option value="Financial &amp; P&amp;L Strategy">Financial &amp; P&amp;L Strategy</option>
+                    <option value="Speaking &amp; Keynote">Speaking &amp; Keynote Panel</option>
+                    <option value="Other Confidential Inquiry">Other Confidential Inquiry</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="formMessage">Message / Scope Outline</label>
+                  <textarea id="formMessage" rows="4" required placeholder="Briefly describe your organizational context, challenges, or objectives..." class="form-input form-textarea"></textarea>
+                </div>
+
+                <button type="submit" class="btn-form-submit">
+                  <span>Submit Inquiry via WhatsApp</span>
+                  <span class="submit-arrow">→</span>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 06 // FOOTER SECTION (Solid Black Luxury Executive Styling) -->
+    <footer class="footer-section">
+      <div class="section-container">
+        
+        <div class="footer-top-row">
+          <div class="footer-brand-col">
+            <div class="footer-logo-group">
+              <img src="icon.png" alt="Umar Syarif" class="footer-avatar-img" width="28" height="28">
+              <span class="footer-brand-name">Umar Syarif</span>
+            </div>
+            <p class="footer-tagline">
+              Visionary Leadership, Human Capital Transformation &amp; Strategic Value Creation.
+            </p>
+          </div>
+
+          <div class="footer-links-col">
+            <span class="footer-heading">NAVIGATION</span>
+            <div class="footer-links-list">
+              <a href="#home" class="footer-link">Overview</a>
+              <a href="#about" class="footer-link">Executive Profile</a>
+              <a href="#expertise" class="footer-link">Strategic Capabilities</a>
+              <a href="#leadership" class="footer-link">Track Record</a>
+              <a href="#contact" class="footer-link">Connect &amp; Advisory</a>
+            </div>
+          </div>
+
+          <div class="footer-social-col">
+            <span class="footer-heading">DIRECT CONTACT</span>
+            <div class="footer-links-list">
+              <a href="https://wa.me/628170034354" target="_blank" rel="noopener" class="footer-link footer-contact-highlight">WA: +62 817-0034-354 ↗</a>
+              <a href="mailto:contact@umarsyarif.com" class="footer-link">contact@umarsyarif.com ↗</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-link">LinkedIn Profile ↗</a>
+            </div>
+          </div>
+
+          <div class="footer-action-col">
+            <span class="footer-heading">OFFICE ADDRESS</span>
+            <p class="footer-address">
+              Jalan Veteran III No. 43, Ds. Banjarsari,<br>
+              Ciawi, Bogor, 16720
+            </p>
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn-back-to-top" aria-label="Back to Top">
+              <span>Back to Top</span>
+              <span class="top-arrow">↑</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-bottom-row">
+          <p class="footer-copyright">
+            © 2026 Umar Syarif. All rights reserved.
+          </p>
+          <p class="footer-built-with">
+            Designed for Executive Leadership &amp; Strategic Impact.
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Language Dropdown Toggle
+    const langBtn = document.getElementById('langBtn');
+    const langMenu = document.getElementById('langMenu');
+    const currentLangCode = document.getElementById('currentLangCode');
+    const langChevron = document.getElementById('langChevron');
+    const langWrapper = document.getElementById('langDropdownWrapper');
+
+    if (langBtn && langMenu) {
+      langBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = langMenu.style.display === 'flex';
+        langMenu.style.display = isOpen ? 'none' : 'flex';
+        langBtn.classList.toggle('active', !isOpen);
+        if (langChevron) langChevron.classList.toggle('rotate', !isOpen);
+      });
+
+      document.addEventListener('click', function(e) {
+        if (langWrapper && !langWrapper.contains(e.target)) {
+          langMenu.style.display = 'none';
+          langBtn.classList.remove('active');
+          if (langChevron) langChevron.classList.remove('rotate');
+        }
+      });
+    }
+
+    function selectLanguage(code, name) {
+      if (currentLangCode) currentLangCode.textContent = code;
+      const items = document.querySelectorAll('.lang-item');
+      items.forEach(item => item.classList.remove('selected'));
+      event.currentTarget.classList.add('selected');
+      if (langMenu) langMenu.style.display = 'none';
+      if (langBtn) langBtn.classList.remove('active');
+      if (langChevron) langChevron.classList.remove('rotate');
+    }
+
+    // Inquiry Form submission to WhatsApp
+    const inquiryForm = document.getElementById('inquiryForm');
+    if (inquiryForm) {
+      inquiryForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('formName').value;
+        const email = document.getElementById('formEmail').value;
+        const subject = document.getElementById('formSubject').value;
+        const message = document.getElementById('formMessage').value;
+
+        const text = `Halo Pak Umar Syarif,\nNama: ${name}\nEmail: ${email}\nPerihal: ${subject}\nPesan: ${message}`;
+        const waUrl = `https://wa.me/628170034354?text=${encodeURIComponent(text)}`;
+        window.open(waUrl, '_blank');
+        alert('Mengalihkan ke WhatsApp untuk mengirim pesan...');
+      });
+    }
+  </script>
+</body>
+</html>
