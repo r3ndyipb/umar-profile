@@ -85,7 +85,11 @@ Pesan: ${formData.message}`;
                   </div>
                   <div>
                     <div className="channel-label">Executive Office</div>
-                    <div className="channel-val">contact@umarsyarif.com</div>
+                    <div className="channel-val">
+                      <a href="mailto:contact@umarsyarif.com" className="channel-link">
+                        contact@umarsyarif.com
+                      </a>
+                    </div>
                   </div>
                 </div>
 
