@@ -719,11 +719,7 @@ a:focus {
 }
 
 .hero-stage:hover .circle-backdrop {
-  transform: scale(1.015);
-}
-
-.hero-stage:hover .portrait-img {
-  transform: translateY(-2px);
+  transform: scale(1.02);
 }
 
 /* ==========================================================================

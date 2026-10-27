@@ -12,24 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Subtle interactive parallax for circle backdrop & portrait
+  // Subtle interactive parallax for circle backdrop only (portrait remains static)
   const heroStage = document.querySelector('.hero-stage');
   const circleBackdrop = document.querySelector('.circle-backdrop');
-  const portraitImg = document.getElementById('portraitImg');
 
-  if (heroStage && circleBackdrop && portraitImg) {
+  if (heroStage && circleBackdrop) {
     heroStage.addEventListener('mousemove', (e) => {
       const rect = heroStage.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
 
-      circleBackdrop.style.transform = `translate(${x * 12}px, ${y * 10}px)`;
-      portraitImg.style.transform = `translate(${x * -6}px, ${y * -4}px)`;
+      circleBackdrop.style.transform = `translate(${x * 16}px, ${y * 14}px)`;
     });
 
     heroStage.addEventListener('mouseleave', () => {
       circleBackdrop.style.transform = 'translate(0px, 0px)';
-      portraitImg.style.transform = 'translate(0px, 0px)';
     });
   }
 });

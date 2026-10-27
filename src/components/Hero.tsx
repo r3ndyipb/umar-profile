@@ -85,13 +85,8 @@ export default function Hero() {
           }}
         />
 
-        {/* Umar Cutout Image (Scaled 20% larger, stuck to bottom right) */}
-        <div
-          className="portrait-container"
-          style={{
-            transform: `translate(${mouseOffset.x * -6}px, ${mouseOffset.y * -4}px)`,
-          }}
-        >
+        {/* Umar Cutout Image (Scaled 20% larger, stuck to bottom right — completely static on hover) */}
+        <div className="portrait-container">
           <img
             src="/UMAR.png"
             alt="Umar Syarif - Executive Portrait"
