@@ -11,7 +11,11 @@ export const metadata: Metadata = {
   title: 'Hai, I am Umar Syarif — Executive Portfolio',
   description: 'Official Executive Portfolio of Umar Syarif — Visionary Leadership, Strategic Innovation & Digital Transformation.',
   icons: {
-    icon: '/icon.png',
+    icon: [
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    shortcut: '/icon.png',
+    apple: '/icon.png',
   },
 };
 

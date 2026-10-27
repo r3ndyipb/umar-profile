@@ -20,8 +20,8 @@ export default function Footer() {
               <img
                 src="/icon.png"
                 alt="Umar Syarif"
-                width={32}
-                height={32}
+                width={28}
+                height={28}
                 className="footer-avatar-img"
               />
               <span className="footer-brand-name">Umar Syarif</span>

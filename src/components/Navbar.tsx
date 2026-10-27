@@ -55,8 +55,8 @@ export default function Navbar() {
           <img
             src="/icon.png"
             alt="Umar Syarif"
-            width={34}
-            height={34}
+            width={28}
+            height={28}
             className="brand-avatar-img"
           />
         </Link>
