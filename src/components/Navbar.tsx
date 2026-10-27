@@ -79,12 +79,12 @@ export default function Navbar() {
       {/* Right Group: Social Icons & Language Dropdown */}
       <div className="nav-socials">
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/umar-syarif-912b4753/"
           target="_blank"
           rel="noopener noreferrer"
           className="nav-icon-link"
-          aria-label="LinkedIn"
-          title="LinkedIn"
+          aria-label="LinkedIn: Umar Syarif"
+          title="LinkedIn: Umar Syarif"
         >
           <svg
             viewBox="0 0 24 24"

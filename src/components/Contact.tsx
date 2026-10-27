@@ -98,7 +98,11 @@ Pesan: ${formData.message}`;
                   </div>
                   <div>
                     <div className="channel-label">Professional Network</div>
-                    <div className="channel-val">linkedin.com/in/umarsyarif</div>
+                    <div className="channel-val">
+                      <a href="https://www.linkedin.com/in/umar-syarif-912b4753/" target="_blank" rel="noopener noreferrer" className="channel-link">
+                        linkedin.com/in/umar-syarif-912b4753
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -115,7 +119,7 @@ Pesan: ${formData.message}`;
                   <span>↗</span>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/umar-syarif-912b4753/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-quick-li"

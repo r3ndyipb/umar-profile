@@ -62,7 +62,7 @@ export default function Footer() {
                 contact@umarsyarif.com ↗
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/umar-syarif-912b4753/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-link"
