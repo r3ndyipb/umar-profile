@@ -52,13 +52,12 @@ export default function Navbar() {
       {/* Left Area: Avatar Icon.png + Menu Links beside it */}
       <div className="nav-left-group">
         <Link href="#home" className="brand-logo-icon" aria-label="Umar Syarif" title="Umar Syarif">
-          <Image
+          <img
             src="/icon.png"
             alt="Umar Syarif"
-            width={26}
-            height={26}
+            width={34}
+            height={34}
             className="brand-avatar-img"
-            priority
           />
         </Link>
 

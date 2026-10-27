@@ -48,7 +48,12 @@ Pesan: ${formData.message}`;
 
               <div className="contact-channel-list">
                 <div className="channel-item">
-                  <div className="channel-icon">📍</div>
+                  <div className="channel-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
                   <div>
                     <div className="channel-label">Office Address</div>
                     <div className="channel-val">Jalan Veteran III No. 43, Ds. Banjarsari, Ciawi, Bogor, 16720</div>
@@ -56,7 +61,11 @@ Pesan: ${formData.message}`;
                 </div>
 
                 <div className="channel-item">
-                  <div className="channel-icon">📱</div>
+                  <div className="channel-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                  </div>
                   <div>
                     <div className="channel-label">Phone &amp; WhatsApp</div>
                     <div className="channel-val">
@@ -68,7 +77,12 @@ Pesan: ${formData.message}`;
                 </div>
 
                 <div className="channel-item">
-                  <div className="channel-icon">✉️</div>
+                  <div className="channel-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="4" width="20" height="16" rx="2" />
+                      <path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                  </div>
                   <div>
                     <div className="channel-label">Executive Office</div>
                     <div className="channel-val">contact@umarsyarif.com</div>
@@ -76,7 +90,12 @@ Pesan: ${formData.message}`;
                 </div>
 
                 <div className="channel-item">
-                  <div className="channel-icon">💼</div>
+                  <div className="channel-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                    </svg>
+                  </div>
                   <div>
                     <div className="channel-label">Professional Network</div>
                     <div className="channel-val">linkedin.com/in/umarsyarif</div>

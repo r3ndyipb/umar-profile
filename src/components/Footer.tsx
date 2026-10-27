@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="footer-brand-col">
             <div className="footer-logo-group">
-              <Image
+              <img
                 src="/icon.png"
                 alt="Umar Syarif"
                 width={32}

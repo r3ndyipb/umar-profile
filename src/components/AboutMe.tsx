@@ -30,13 +30,13 @@ export default function AboutMe() {
           <div className="about-visual-col">
             <div className="about-image-card">
               <div className="about-image-wrapper">
-                <Image
+                <img
                   src="/nyamping.png"
                   alt="Umar Syarif Executive Profile"
                   width={600}
                   height={720}
                   className="about-portrait-img"
-                  priority
+                  loading="eager"
                 />
               </div>
               
