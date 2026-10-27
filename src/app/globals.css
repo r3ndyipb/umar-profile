@@ -1,13 +1,13 @@
 /* ==========================================================================
-   UMAR SYARIF — NEXT.JS EXECUTIVE PORTFOLIO DESIGN SYSTEM
-   - Font: Plus Jakarta Sans / Clean Neo-Grotesque Sans
-   - Fullscreen 100vw layout with Hero Stage + Bottom Marquee Loop
-   - Clean Circle Backdrop (#C8C8C8)
-   - Enlarged Headline (+10%) & Cyber Holographic Laser Glitch
-   - Thin 2-Line Executive Bio
-   - Apple iOS 26 Liquid Glass Button
-   - Infinite 36+ Skills Marquee Ticker
+   Self-hosted Offline Fonts (Zero CDN)
    ========================================================================== */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans.woff2') format('woff2');
+}
 
 :root {
   --bg-main: #E5E5E5;
