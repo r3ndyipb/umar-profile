@@ -1781,23 +1781,47 @@ a:focus {
   gap: 10px;
 }
 
+.footer-section a,
 .footer-link {
   font-size: 0.86rem;
-  color: #B5B5B5;
-  text-decoration: none;
+  color: #FFFFFF !important;
+  text-decoration: none !important;
   font-weight: 500;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: font-weight 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
   width: fit-content;
 }
 
-.footer-link:hover {
-  color: #00E5FF;
-  transform: translateX(2px);
+.footer-section a:link,
+.footer-section a:visited,
+.footer-section a:active,
+.footer-link:link,
+.footer-link:visited,
+.footer-link:active {
+  color: #FFFFFF !important;
+  text-decoration: none !important;
 }
 
-.footer-contact-highlight {
-  color: #00E5FF;
-  font-weight: 700;
+.footer-section a:hover,
+.footer-section a:focus,
+.footer-link:hover,
+.footer-link:focus {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  transform: translateX(3px);
+}
+
+.footer-contact-highlight,
+.footer-contact-highlight:link,
+.footer-contact-highlight:visited {
+  color: #FFFFFF !important;
+  font-weight: 600;
+}
+
+.footer-contact-highlight:hover,
+.footer-contact-highlight:focus {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
 }
 
 .footer-address {
